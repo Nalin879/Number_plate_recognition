@@ -36,28 +36,5 @@ Feed annotated data into YOLOv5. The model adjusts parameters for accurate predi
 
 The Flask app (`app.py`) runs inference on new images using the trained YOLOv5 model.
 
-number-plate-recognition/
-│
-├── data/
-│   ├── images/
-│   └── labels/
-│
-├── templates/
-│   └── index.html
-│   └── layout.html
-│
-├── static/
-│   └── models/
-│            └── best.onnx
-│   └── predict/
-│   └── roi/
-│   └── upload/
-│
-├── utils/
-├── train.py
-├── yolo_predictions.py
-├── app.py
-├── requirements.txt
-└── README.md
 
 
