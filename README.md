@@ -1,36 +1,63 @@
-# Number Plate Recognition using YOLOv5
+# Number Plate Recognition using YOLOv5 and Flask
 
 ## Overview
 
-This project employs YOLOv5, a state-of-the-art object detection model, for the task of recognizing number plates in images. The dataset used for training is annotated using LabelImg, a graphical image annotation tool.
+This project combines YOLOv5, a real-time object detection model, with a Flask web application for number plate recognition. The dataset is annotated using LabelImg, and the app is run using `app.py`.
 
 ## Getting Started
 
 ### Prerequisites
 
-Before getting started, make sure you have the following prerequisites installed:
+Ensure you have the following installed:
 
-- **Python 3.x:** The programming language used for the project.
-- **PyTorch:** An open-source machine learning library.
-- **OpenCV:** A library for computer vision and image processing.
-- **YOLOv5:** The version 5 of the You Only Look Once (YOLO) object detection model.
-- **LabelImg:** A graphical image annotation tool.
+- **Python 3.x**
+- **PyTorch**
+- **OpenCV**
+- **YOLOv5**
+- **LabelImg**
+- **Flask**
 
-## How It Works (Brief Theory)
+
+## How It Works
 
 ### YOLOv5
 
-YOLOv5 is an object detection model dividing an image into a grid, predicting bounding boxes and class probabilities for objects in each grid cell. Designed for real-time object detection.
+YOLOv5 divides an image into a grid, predicting bounding boxes and class probabilities for objects. Designed for real-time object detection.
 
 ### LabelImg
 
-LabelImg is a graphical image annotation tool streamlining manual annotation for object detection. Users draw bounding boxes around objects, and annotations are saved in YOLO format.
+LabelImg streamlines manual annotation for object detection. Annotations are saved in YOLO format.
 
 ### Training
 
-Training involves feeding annotated data into YOLOv5. The model adjusts parameters to predict bounding boxes and class labels accurately. Trained weights are saved for later inference.
+Feed annotated data into YOLOv5. The model adjusts parameters for accurate predictions. Trained weights are saved for later inference.
 
 ### Inference
 
-Inference uses the trained model to predict on new images. `detect.py` runs inference on specified images, utilizing the trained YOLOv5 model.
+The Flask app (`app.py`) runs inference on new images using the trained YOLOv5 model.
+
+number-plate-recognition/
+│
+├── data/
+│   ├── images/
+│   └── labels/
+│
+├── templates/
+│   └── index.html
+│   └── layout.html
+│
+├── static/
+│   └── models/
+│            └── best.onnx
+│   └── predict/
+│   └── roi/
+│   └── upload/
+│
+├── utils/
+├── train.py
+├── yolo_predictions.py
+├── app.py
+├── requirements.txt
+└── README.md
+
 
